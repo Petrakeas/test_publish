@@ -1,0 +1,4 @@
+include ':mylibrary'
+include ':testlib'
+include ':app'
+rootProject.name = "PublishJavaLib"

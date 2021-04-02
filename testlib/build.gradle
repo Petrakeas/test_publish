@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+
+group = 'com.example'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+
+    withSourcesJar()
+    withJavadocJar()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+publishing {
+    publications {
+        myJava(MavenPublication) {
+            from components.java
+        }
+        version = '1.0.0'
+    }
+}
